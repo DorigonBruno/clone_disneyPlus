@@ -2,6 +2,7 @@
 
 .shows {
   padding: 2vw 5.6vw;
+  min-height: 50vw;
 
   &__list {
     display: none;
@@ -35,7 +36,7 @@
       margin: 0 1vw;
       cursor: pointer;
       border-bottom: 5px solid transparent;
-      transition: ease .3s;
+      transition: ease 0.3s;
 
       &--is-active {
         border-color: cores.$corTextoSecundario;
