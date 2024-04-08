@@ -2,6 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll("[data-tab-button]");
   const questions = document.querySelectorAll("[data-faq-question]");
 
+  const heroSection = document.querySelector(".hero");
+  const alturaHero = heroSection.clientHeight;
+
+  function slideWindow() {
+    const posicaoJanela = window.scrollY;
+    const header = document.querySelector(".header");
+    
+    if (posicaoJanela < alturaHero) {
+      header.classList.add("header--hidden");
+    } else {
+      header.classList.remove("header--hidden");
+    }
+  }
+
+  window.addEventListener("scroll", slideWindow);
+
   for (let i = 0; i < buttons.length; i++) {
     const buttonArray = buttons[i];
 

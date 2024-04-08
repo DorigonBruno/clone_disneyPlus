@@ -1,4 +1,5 @@
 @use "cores";
+@use "header";
 @use "hero";
 @use "shows";
 @use "plans";
@@ -85,17 +86,46 @@ body {
 }
 
 .button {
-  display: block;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
   width: 100%;
   height: 60px;
   font-size: 18px;
   color: cores.$corTextoSecundario;
-  background: cores.$corButtonHero;
+  background: cores.$corBotaoPrimario;
   text-transform: uppercase;
   border-radius: 4px;
-  margin-top: 2vw;
-  margin-bottom: 8px;
   cursor: pointer;
+  letter-spacing: 1px;
+  border: 1px solid cores.$corBotaoPrimario;
+  transition: 0.3s ease;
+  padding: 8px 14px;
+
+  &:hover {
+    background: lighten(cores.$corBotaoPrimario, 3%);
+  }
+
+  &--secondary {
+    background: cores.$corBotaoSecundario;
+    border-color: cores.$corBotaoSecundario;
+    transition: 0.3s ease;
+
+    &:hover {
+      background: lighten(cores.$corBotaoSecundario, 3%);
+    }
+  }
+
+  &--dark {
+    background: rgba(cores.$corBotaoDark, 0.8);
+    border-color: cores.$corTextoSecundario;
+    transition: 0.3s ease;
+
+    &:hover {
+      background: cores.$corTextoSecundario;
+      color: cores.$corDeFundo;
+    }
+  }
 }
 
 .image-flex {
