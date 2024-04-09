@@ -3,12 +3,25 @@
 
   h2 {
     text-align: center;
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
+
+    @media (max-width: 768px) {
+      display: block;
+      margin-top: -10px;
+    }
+
+    .button{
+      margin-top: 24px;
+    }
 
     &__item {
       text-align: center;

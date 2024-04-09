@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./dist/css/main.css">
+  <link rel="shortcut icon" href="./dist/images/favicon.ico" type="image/x-icon">
   <title>Clone DsneyPlus +</title>
 </head>
 <body>
@@ -153,7 +154,10 @@
     </div>
   </section>
   <section class="image-flex image-flex--image-full">
-    <img src="./dist/images/fundo_rei_leao.png" alt="rei leão">
+    <picture>
+      <source media="(max-width:768px)" srcset="./dist/images/fundo_rei_leao_celular.png" />
+      <img src="./dist/images/fundo_rei_leao.png" alt="rei leão">
+    </picture>
     <div class="image-flex__container image-flex--image-full__container">
       <h2 class="title--medium">Baixe filmes e Séries</h2>
       <p class="text--big">Baixe e assista de onde quiser. Assim, seus favoritos sempre com você, até mesmo sem
@@ -315,4 +319,5 @@
   </footer>
   <script src="./src/main.js"></script>
 </body>
+
 </html>
